@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>发送消息</button>
+  <script>
+    // 1.call()
+    // const obj = {
+    //   uname: 'pink'
+    // }
+    // function fn(x, y) {
+    //   // x = 1, y = 2
+    //   console.log(this)
+    //   console.log(x + y)
+    // }
+    // // 1. 调用函数
+    // // 2. 改变this指向
+    // // call()括号中写入改变的this指向
+    // fn.call(obj, 1, 2)
+
+    // 2.apply()
+    // const obj = {
+    //   age: 18
+    // }
+    // function fn(x, y) {
+    //   console.log(this)
+    //   console.log(x + y)
+    // }
+    // fn.apply(obj, [1, 2])
+    // // 返回值就是函数的返回值，因为 apply 就是调用的函数
+    // // 使用场景
+    // const arr = [100, 44, 77]
+    // const max = Math.max.apply(Math, arr)
+    // const min = Math.min.apply(Math, arr)
+    // console.log(max, min)
+
+    // 3.bind()方法
+    // const obj = {
+    //   age: 18
+    // }
+    // function fn() {
+    //   console.log(this)
+    // }
+    // const fun = fn.bind(obj)
+    // fun()
+
+    // 案例
+    const btn = document.querySelector('button')
+    btn.addEventListener('click', function () {
+      this.disabled = true
+      window.setTimeout(function () {
+        this.disabled = false
+      }.bind(this), 2000)
+    })
+  </script>
+</body>
+
+</html>

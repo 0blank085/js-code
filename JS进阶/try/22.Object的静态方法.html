@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1. Object keys() 方法获取对象的所有属性名
+    const o = { name: 'pink', age: 18 }
+    console.log(Object.keys(o))
+    // 2. Object values() 方法获得对象的所有属性值
+    console.log(Object.values(o))
+    // 3. Object.assign 方法用于拷贝对象
+    const obj = {}
+    Object.assign(obj, o)
+    console.log(obj)
+  </script>
+</body>
+
+</html>

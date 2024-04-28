@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const arr = [1, 2, 3]
+    // 简而言之 就是把arr中的 1，2，3 分别分给了变量 a,b,c
+    const [a, b, c] = arr
+    console.log(a, b, c)
+
+    // 两个变量交换
+    let d = 1
+    let e = 2; // <= 此处必须加 ; 号
+    [e, d] = [d, e]
+    console.log(d, e)
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // // 1.基本语法
+    // const obj = {
+    //   uname: '我',
+    //   age: 18
+    // }
+    // const { uname, age } = obj
+    // console.log(uname, age)
+
+    // // 2.变量重复时
+    // const uname = 'red'
+    // const obj = {
+    //   uname: '我',
+    //   age: 18
+    // }
+    // const { uname: username, age } = obj // 在修改时一定是 旧变量: 新变量
+    // console.log(username, age)
+
+    // 3.数组对象
+    // const arr = [{
+    //   uname: 'red',
+    //   age: 18
+    // }]
+    // const [{ uname, age }] = arr
+    // console.log(uname, age)
+
+    // 4.多级对象
+    const pig = {
+      name: '佩奇',
+      family: {
+        mother: '1',
+        father: '2',
+        son: '3'
+      }
+    }
+    const { name, family: { mother, father, son } } = pig
+    console.log(name, mother, father, son)
+  </script>
+</body>
+
+</html>

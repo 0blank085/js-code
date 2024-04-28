@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.箭头函数直接使用this
+    const fn = () => {
+      console.log(this)
+    }
+    fn()
+    // 2.在对象中使用箭头函数this
+    const odj = {
+      name: 'f',
+      getSum: () => {
+        console.log(this)
+      }
+    }
+    odj.getSum()
+    // 3.在普通函数中使用箭头函数this
+    function Get() {
+      let i = 10
+      const fun = () => {
+        console.log(this)
+      }
+      fun()
+    }
+    Get()
+    // 4.在对象里的正常函数中使用箭头函数的this
+    const odj1 = {
+      name: 'f',
+      getSum: function () {
+        const get = () => {
+          console.log(this)
+        }
+        get()
+      }
+    }
+    odj1.getSum()
+
+
+    // 总结：箭头函数中的this只会从自己的作用域链的上一层沿用this。
+  </script>
+</body>
+
+</html>

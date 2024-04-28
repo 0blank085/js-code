@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // 一般函数表达式
+        // const fn = function fun() {
+        //     console.log(123)
+        // }
+        // fn()
+
+        // // 1.箭头函数的基本语法
+        // const fn = () => {
+        //     console.log(123)
+        // }
+        // fn()
+
+        // 2.箭头函数的传参
+        // 多个参数 (i,y,x)
+        // const fn = (i) => {
+        //     console.log(i)
+        // }
+        // fn(123)
+
+        // 只有一个形参的时候可以不写小括号
+        const fn = i => {
+            console.log(i)
+        }
+        fn(123)
+
+        // 3.只有一行代码的时候可以不写大括号
+        const fun = x => console.log(x)
+
+        // 4.只有一行代码的时候也可以省略return
+        const k = x => x + x
+        // const k = x => x + x === const k = x => {
+        //     return x + x
+        // }
+        console.log(k(2))
+
+        // 5.直接返回一个对象
+        const g = (name) => ({uname: uname})// <=前面的uname是个对象
+        fn('刘德华')
+    </script>
+</body>
+</html>

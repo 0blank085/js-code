@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [1,2,3]
+        // // 此处不是函数的剩余参数！！！
+        // // 作用就是展开数组
+        // console.log(...arr)
+
+        // 判断数组的最大值
+        // ...arr === 1,2,3本质上是这样的
+        console.log(Math.max(...arr))
+
+        // 合并数组
+        const arr2 = [3,4,5]
+        const arr1 = [...arr,...arr2]
+        console.log(arr1)
+    </script>
+</body>
+</html>

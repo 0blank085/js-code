@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const pink = {
+      uname: 'pink',
+      age: 18
+    }
+    console.log(pink)
+    const o = pink
+    console.log(o)
+    o.age = 20
+    // 直接赋值会导致源对象和改变对象的值相同，从而导致出现问题
+    console.log(o)
+    console.log(pink)
+  </script>
+</body>
+
+</html>

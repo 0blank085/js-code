@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 使用正常对象会导致不同的构造函数所声明的对象的类容相同
+
+    // const Person = {
+    //   eyes: 2,
+    //   head: 1
+    // }
+
+    function Person() {
+      this.eyes = 2,
+        this.head = 1
+    }
+    // 继承
+    function Woman() {
+
+    }
+    function Man() {
+
+    }
+    // Woman 通过原型继承了 Person 中的属性
+    // 但是会用一个问题，这种继承会导致Woman中原来的属性被覆盖掉
+    Woman.prototype = new Person
+    Woman.prototype.constructor = Woman
+    const red = new Woman()
+    // 给Woman中添加一个方法
+
+    // 此时Woman和Man中都出现了一个方法baby
+    Woman.prototype.baby = function () {
+      console.log('宝贝')
+    }
+    console.log(red)
+    // console.log(Woman.prototype.constructor)
+    Man.prototype = new Person
+    Man.prototype.constructor = Man
+    const pink = new Man()
+    // 给Man中添加一个方法
+
+    // 此时Woman和Man中都出现了一个方法baby
+    console.log(pink)
+    // console.log(Man.prototype.constructor)
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function Star() {
+    }
+    // 追加
+    // Star.prototype.sing = function () {
+    //   console.log('唱歌')
+    // }
+
+    console.log(Star.prototype.constructor)
+
+    // 赋值
+    Star.prototype = {
+      // 因为赋值会导致Star中的constructor被覆盖掉,所以需要重新赋值
+      constructor: Star,
+
+      sing: function () {
+        console.log('唱歌')
+      },
+      dance: function () {
+        console.log('跳舞')
+      }
+    }
+    console.log(Star.prototype.constructor)
+  </script>
+</body>
+
+</html>

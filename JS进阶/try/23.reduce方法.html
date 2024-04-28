@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const arr = [1, 2, 3, 4]
+    // 1.没有初始值
+    // const total = arr.reduce(function (prev, current) {
+    //   return prev + current
+    // })
+    // console.log(total)
+
+    // 2.有初始值
+    // const total = arr.reduce(function (prev, current) {
+    //   return prev + current
+    // }, 10)
+    // console.log(total)
+
+    // 3.箭头函数写法
+    const total = arr.reduce((prev, current) => prev + current)
+    console.log(total)
+  </script>
+</body>
+
+</html>

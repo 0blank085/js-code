@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.split方法 把字符串转换为数组
+    // const str = 'pink, red/cool'
+    // const arr = str.split(',')
+    // console.log(arr)
+    // const str1 = '2004-4-4'
+    // const arr1 = str1.split('-')
+    // console.log(arr1)
+
+    // 2.substring方法 截取字符串
+    // substring(起始位置, 结束位置) 位置为下标且结束位置不算入截取字符中
+    // const str = '123456'
+    // console.log(str.substring(3, 5))
+
+    // 3.startsWith方法，判断字符串开头
+    // const name = 'red father'
+    // console.log(name.startsWith('red'))
+    // console.log(name.startsWith('fat', 4))// 此处 4 为下标
+
+    // 4.includes 判断某个字符是不是包含在一个字符串里
+    const str = '我是pink老师'
+    console.log(str.includes('pink', 3))
+    console.log(str.includes('pink'))
+  </script>
+</body>
+
+</html>

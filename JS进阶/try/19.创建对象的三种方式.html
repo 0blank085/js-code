@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.字面量
+    const obj = { name: 'pig' }
+    // 2.new Object
+    const obj1 = new Object({ age: 18 })
+    // 3.构造函数
+    function Pig(name, age, gender) {
+      this.name//属性 = name//实参,
+      this.age = age,
+        this.gender = gender
+    }
+    const Peppa = new Pig('猪爸爸', 32, '男')
+    console.log(Peppa)
+  </script>
+</body>
+
+</html>

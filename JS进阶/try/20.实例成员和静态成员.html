@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 实例成员
+    // 实例对象上的属性和方法
+    function Pig(name, age, gender) {
+      this.name//属性 = name//实参,
+      this.age = age,
+        this.gender = gender
+    }
+    const Peiqi = new Pig("佩奇", 6, '女')
+    const Qiaozi = new Pig("乔治", 3, '男')
+    console.log(Peiqi === Qiaozi)// 实例成员自建互不影响
+    // 静态成员
+    // 放到构造函数上的属性和方法
+    Pig.eye = 2
+    console.log(Pig.eye)
+  </script>
+</body>
+
+</html>

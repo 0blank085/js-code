@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const obj = {
+      uname: 'pink',
+      age: 18,
+      family: {
+        baby: '小pink'
+      }
+    }
+    const o = { ...obj }
+    console.log(o)
+    o.age = 20
+    // 浅拷贝可以解决部分直接拷贝的问题
+    console.log(o)
+    console.log(obj)
+    // 但是浅拷贝在遇到了复杂的对象结构时就会出现和直接复制一样的问题
+    o.family.baby = '老pink'
+    console.log(o)
+    console.log(obj)
+  </script>
+</body>
+
+</html>

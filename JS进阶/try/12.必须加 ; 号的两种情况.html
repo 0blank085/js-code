@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // // 1.立即执行函数
+    // (function () { })();
+    // (function () { }());
+
+    // 2.有数组是的时候
+    const me = '我'; // 若此处不加 ; 号 则系统会将其看作 const me = '我'[1,2,3].map........ 这样会导致报错
+    // 嗯,也可以这样写 ;[1,2,3]
+    [1, 2, 3].map(function (e) {
+      console.log(e)
+    })
+  </script>
+</body>
+
+</html>

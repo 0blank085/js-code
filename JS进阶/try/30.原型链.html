@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function Person() {
+
+    }
+    function C() {
+
+    }
+    const ldh = new Person()
+    // 结果
+    console.log(ldh.__proto__)
+    console.log(ldh.__proto__.__proto__)
+    console.log(ldh.__proto__.__proto__.__proto__)
+
+    // 对比
+    console.log(ldh.__proto__ === Person.prototype)
+    console.log(ldh.__proto__.__proto__ === Object.prototype)
+    console.log(ldh.__proto__.__proto__.__proto__ === Object.prototype.__proto__)
+
+    // instanceof 使用
+    console.log(ldh instanceof Person)
+    console.log(ldh instanceof C)
+    console.log(ldh instanceof Object)
+  </script>
+</body>
+
+</html>

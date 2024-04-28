@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      color: red;
+      background-color: antiquewhite;
+      text-align: center;
+      width: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <script>
+    let i = 1
+    const box = document.querySelector('div')
+    function Mousemove() {
+      i++
+      box.innerHTML = i
+    }
+    function time(fn, t) {
+      let timer = null
+      return function () {
+        if (!timer) {
+          timer = setTimeout(function () {
+            fn()
+            // 此处不用 clearTimeout , 因为cleartime关闭settimeout的返回值不是null
+            timer = null
+          }, t)
+        }
+      }
+    }
+    box.addEventListener('mousemove', time(Mousemove, 500))
+  </script>
+</body>
+
+</html>

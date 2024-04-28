@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: antiquewhite;
+      text-align: center;
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <script>
+    const box = document.querySelector('div')
+    let i = 1
+    function Mousemove() {
+      i++
+      box.innerHTML = i
+    }
+    function debounce(fn, t) {
+      let timer
+      return function () {
+        if (timer) clearTimeout(timer)
+        timer = setTimeout(function () {
+          fn()
+        }, t);
+      }
+    }
+    box.addEventListener('mousemove', debounce(Mousemove, 500))
+  </script>
+</body>
+
+</html>
